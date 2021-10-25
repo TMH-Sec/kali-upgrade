@@ -43,6 +43,7 @@ phprev() {
 # Easy way of creating php reverse shell for your desired interface and your prefered port number.
 # Outputs to whatever directory you are currently in.
 # Usage: phprev <interface> <port>
+# Example: phprev tun0 1337
 ipaddy=$(ip -f inet addr show "$1" | sed -En -e 's/.*inet ([0-9.]+).*/\1/p')
 port="$2"
 
